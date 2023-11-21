@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .row_chart::before,
+    .row_chart::after,
+    .row_chart {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    .row_chart {
+      width: 300px;
+      height: 300px;
+      margin: auto;
+      /* background: url("//blog.codepen.io/wp-content/uploads/2012/06/Button-White-Large.png") no-repeat 50%/70% rgba(0, 0, 0, 0.1); */
+      color: #69ca62;
+      box-shadow: inset 0 0 0 1px rgba(105, 202, 98, 0.5);
+    }
+
+    .row_chart::before,
+    .row_chart::after {
+      content: "";
+      z-index: -1;
+      margin: -3%;
+      box-shadow: inset 0 0 0 3px;
+      animation: clipMe 8s linear infinite;
+    }
+
+    .row_chart::before {
+      animation-delay: -4s;
+    }
+
+    @keyframes clipMe {
+
+      0%,
+      100% {
+        clip: rect(0px, 320px, 2px, 0px);
+      }
+
+      25% {
+        clip: rect(0px, 2px, 320px, 0px);
+      }
+
+      50% {
+        clip: rect(318px, 320px, 320px, 0px);
+      }
+
+      75% {
+        clip: rect(0px, 320px, 320px, 318px);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+
+
+
+    <div class="row_chart"></div>
+  </div>
+</body>
+
+</html>
